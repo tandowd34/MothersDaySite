@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/6.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/8.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/9.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/10.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/11.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/12.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/13.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/14.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/15.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/16.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/17.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/18.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/19.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/20.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/21.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/22.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/23.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/24.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/25.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/26.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/27.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/28.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/29.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/30.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/31.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/32.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/33.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/34.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/35.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/36.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/37.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/38.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/39.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/40.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/41.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/42.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/43.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/44.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/45.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/46.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/47.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/48.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/49.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/50.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/51.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/52.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/53.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/54.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/55.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/56.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/57.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/58.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/59.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/60.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/61.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/62.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/63.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/64.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/65.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/66.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/67.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/68.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/69.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/70.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/71.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/72.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/73.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/74.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="Pictures/75.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="Pictures/76.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="Pictures/77.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="Pictures/78.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="Pictures/79.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="Pictures/80.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/5.jpg" style="width:100%" onclick="currentSlide(5)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/6.jpg" style="width:100%" onclick="currentSlide(6)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/7.jpg" style="width:100%" onclick="currentSlide(7)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/8.jpg" style="width:100%" onclick="currentSlide(8)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/9.jpg" style="width:100%" onclick="currentSlide(9)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/10.jpg" style="width:100%" onclick="currentSlide(10)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/11.jpg" style="width:100%" onclick="currentSlide(11)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/12.jpg" style="width:100%" onclick="currentSlide(12)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/13.jpg" style="width:100%" onclick="currentSlide(13)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/14.jpg" style="width:100%" onclick="currentSlide(14)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/15.jpg" style="width:100%" onclick="currentSlide(15)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/16.jpg" style="width:100%" onclick="currentSlide(16)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/17.jpg" style="width:100%" onclick="currentSlide(17)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/18.jpg" style="width:100%" onclick="currentSlide(18)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/19.jpg" style="width:100%" onclick="currentSlide(19)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/20.jpg" style="width:100%" onclick="currentSlide(20)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/21.jpg" style="width:100%" onclick="currentSlide(21)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/22.jpg" style="width:100%" onclick="currentSlide(22)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/23.jpg" style="width:100%" onclick="currentSlide(23)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/24.jpg" style="width:100%" onclick="currentSlide(24)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/25.jpg" style="width:100%" onclick="currentSlide(25)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/26.jpg" style="width:100%" onclick="currentSlide(26)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/27.jpg" style="width:100%" onclick="currentSlide(27)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/28.jpg" style="width:100%" onclick="currentSlide(28)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/29.jpg" style="width:100%" onclick="currentSlide(29)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/30.jpg" style="width:100%" onclick="currentSlide(30)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/31.jpg" style="width:100%" onclick="currentSlide(31)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/32.jpg" style="width:100%" onclick="currentSlide(32)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/33.jpg" style="width:100%" onclick="currentSlide(33)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/34.jpg" style="width:100%" onclick="currentSlide(34)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/35.jpg" style="width:100%" onclick="currentSlide(35)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/36.jpg" style="width:100%" onclick="currentSlide(36)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/37.jpg" style="width:100%" onclick="currentSlide(37)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/38.jpg" style="width:100%" onclick="currentSlide(38)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/39.jpg" style="width:100%" onclick="currentSlide(39)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/40.jpg" style="width:100%" onclick="currentSlide(40)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/41.jpg" style="width:100%" onclick="currentSlide(41)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/42.jpg" style="width:100%" onclick="currentSlide(42)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/43.jpg" style="width:100%" onclick="currentSlide(43)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/44.jpg" style="width:100%" onclick="currentSlide(44)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/45.jpg" style="width:100%" onclick="currentSlide(45)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/46.jpg" style="width:100%" onclick="currentSlide(46)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/47.jpg" style="width:100%" onclick="currentSlide(47)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/48.jpg" style="width:100%" onclick="currentSlide(48)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/49.jpg" style="width:100%" onclick="currentSlide(49)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/50.jpg" style="width:100%" onclick="currentSlide(50)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/51.jpg" style="width:100%" onclick="currentSlide(51)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/52.jpg" style="width:100%" onclick="currentSlide(52)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/53.jpg" style="width:100%" onclick="currentSlide(53)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/54.jpg" style="width:100%" onclick="currentSlide(54)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/55.jpg" style="width:100%" onclick="currentSlide(55)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/56.jpg" style="width:100%" onclick="currentSlide(56)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/57.jpg" style="width:100%" onclick="currentSlide(57)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/58.jpg" style="width:100%" onclick="currentSlide(58)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/59.jpg" style="width:100%" onclick="currentSlide(59)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/60.jpg" style="width:100%" onclick="currentSlide(60)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/61.jpg" style="width:100%" onclick="currentSlide(61)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/62.jpg" style="width:100%" onclick="currentSlide(62)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/63.jpg" style="width:100%" onclick="currentSlide(63)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/64.jpg" style="width:100%" onclick="currentSlide(64)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/65.jpg" style="width:100%" onclick="currentSlide(65)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/66.jpg" style="width:100%" onclick="currentSlide(66)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/67.jpg" style="width:100%" onclick="currentSlide(67)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/68.jpg" style="width:100%" onclick="currentSlide(68)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/69.jpg" style="width:100%" onclick="currentSlide(69)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/70.jpg" style="width:100%" onclick="currentSlide(70)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/71.jpg" style="width:100%" onclick="currentSlide(71)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/72.jpg" style="width:100%" onclick="currentSlide(72)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/73.jpg" style="width:100%" onclick="currentSlide(73)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/74.jpg" style="width:100%" onclick="currentSlide(74)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/75.jpg" style="width:100%" onclick="currentSlide(75)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/76.jpg" style="width:100%" onclick="currentSlide(76)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/77.jpg" style="width:100%" onclick="currentSlide(77)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/78.jpg" style="width:100%" onclick="currentSlide(78)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Pictures/79.jpg" style="width:100%" onclick="currentSlide(79)" alt="No matter where we are we will always see the same sunset">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Pictures/80.jpg" style="width:100%" onclick="currentSlide(80)" alt="No matter where we are we will always see the same sunset">
+    </div>    
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+</body>
+</html>
